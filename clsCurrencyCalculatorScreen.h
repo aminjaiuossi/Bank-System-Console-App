@@ -103,5 +103,10 @@ public:
 
 
     }
+
+   /* template <typename T> T MyMax(T N1, T N2)
+    {
+        return (N1 > N2) ? N1 : N2;
+    }*/
 };
 

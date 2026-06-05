@@ -82,7 +82,7 @@ public:
 		return Number;
 	}
 
-	static double ReadFloatNumber(string ErrorMessage = "Invalid Number, Enter again\n")
+	static float ReadFloatNumber(string ErrorMessage = "Invalid Number, Enter again\n")
 	{
 		float Number;
 		while (!(cin >> Number)) {
@@ -93,13 +93,13 @@ public:
 		return Number;
 	}
 
-	static double ReadFloatNumberBetween(double From, double To, string ErrorMessage = "Number is not within range, Enter again:\n")
+	static float ReadFloatNumberBetween(float From, float To, string ErrorMessage = "Number is not within range, Enter again:\n")
 	{
-		float Number = ReadFloatNumber();
+		float Number = ReadDblNumber();
 
 		while (!IsNumberBetween(Number, From, To)) {
 			cout << ErrorMessage;
-			Number = ReadDblNumber();
+			Number = ReadFloatNumber();
 		}
 		return Number;
 	}
@@ -139,11 +139,11 @@ public:
 
 	static short ReadShortNumberBetween(short From, short To, string ErrorMessage = "Number is not within range, Enter again:\n")
 	{
-		short Number = ReadDblNumber();
+		short Number = clsInputValidate::ReadShortNumber();
 
 		while (!IsNumberBetween(Number, From, To)) {
 			cout << ErrorMessage;
-			Number = ReadDblNumber();
+			Number = clsInputValidate::ReadShortNumber();
 		}
 		return Number;
 	}
